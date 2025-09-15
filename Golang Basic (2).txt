@@ -1,0 +1,11 @@
+1. Belajar basic golang
+2. Belajar looping & basic algoritma
+3. Penulisan function berbeda
+4. Pointer 
+5. Structure 
+6. Method
+7. Concurrency
+8. Buffer Select Mutex
+9. Menghubungkan database ke aplikasi Golang
+10. Testing Simple Unit Testing
+11. Deployment
