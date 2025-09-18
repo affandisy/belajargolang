@@ -1,0 +1,129 @@
+## CHALLENGE 1 : VARIABLE
+Buatlah sebuah variabel dengan nama `myNum` dengan tipe data int32 dan assign nilai 50 ke dalam variabel tersebut Lalu, print variable tersebut ke dalam terminal
+
+Buatlah sebuah variabel dengan nama `myNum2` dengan tipe data float32 dan assign nilai 51 ke dalam variabel tersebut Lalu, print variable tersebut ke dalam terminal
+
+Buatlah sebuah variabel dengan nama `myNumStr` dengan tipe data string dan assign karakter "50" ke dalam variabel tersebut Lalu, print variable tersebut ke dalam terminal
+
+
+## CHALLENGE 2 : VARIABLE 2
+
+Buatlah variabel dengan dengan ketentuan berikut- x dan assign nilai int32 5- y dan assign nilai int32 10
+Buatlah variabel baru dengan nama z, yang merupakan hasil penjumlahan dari x dan y. 
+Lalu print ke dalam terminal
+
+
+## CHALLENGE 3 : COMMAND LINE INTERFACE
+
+Membuat program CLI yang menerima input nama (string) dan akan menampilkan `hello [nama]`
+contoh ketika kita memasukan input `Bambang` maka output yang di print adalah `hello Bambang"
+
+
+## CHALLENGE 4 : Array & Slice 1
+
+Buatlah slice dengan nama `people` yang berisikan nama-nama orang `Walt, Jesse, Skyler, Saul`- 
+hitung berapa panjang slice tersebut dan tampilkan ke dalam terminal- 
+tambahkan `Hank` dan `Marie` ke dalam slice `people`- 
+hitung berapa panjang slice setelah ditambahkan `Hank` dan `Marie` dan tampilkan ke dalam terminal- 
+tampilkan `people` ke dalam terminal
+
+
+## CHALLENGE 5 : Array & Slice 2
+Buatlah sebuah array dengan kapasitas 3 elemen yang berisikan `map` yang memiliki `keys`, `name` dan `gender`, lalu isi array tersebut dengan data berikut, menggunakan perintah append
+
+name: Hank
+gender: M
+name: Heisenberg
+gender: M
+name: Skyler
+gender: F
+
+```dan tampilkan array tersebut ke dalam terminal.
+Setelah itu modifikasi array tadi, untuk setiap data dengan `gender` `F` tambahkan `Mrs` di depan namanya, dan `M` tambahkan `Mr`. 
+Lalu tampilkan kembali ke dalam terminal
+
+## CHALLENGE 6 : Conditional 1
+Buatlah sebuah program CLI sederhana yang menerima input`Nama`
+Program tersebut akan me-random angka `1-100` dan akan menampilkan : 
+
+`Selamat [Name], anda sangat beruntung` jika mendapat angka > 80
+`Selamat [Name], anda beruntung` jika mendapat angka <= 80 dan > 60
+`Mohon maaf [Name], anda kurang beruntung` jika mendapat angka <= 60 dan > 40
+`Mohon maaf [Name], anda sial` jika mendapat angka <= 40
+
+Gunakan switch-case dalam studi kasus diatas, untuk membuat random angka silahkan explore `Math.Rand`NG Challenge 1 : Conditional 1
+
+## CHALLENGE 7 : Conditional 2
+
+Buatlah sebuah aplikasi CLI yang akan menerima input berupa `Nama` dan `Umur`
+Jika`Umur`lebih besar dari 18 maka aplikasi akan menampilkan `Silahkan masuk`
+dan jika`Umur` lebih kecil sama dengan 18 maka akan menampilkan `Dilarang masuk, maksimal umur 19`
+Dan perlu perlu juga menampilkan pesan error jika `Umur < 0`, `Umur > 100`,
+Umur bukan merupakan angka,
+PESAN ERRORdibebaskan selama masuk akal.
+
+## CHALLENGE 8 : Looping 1
+Buatlah sebuah variable yang merupakan slice yang berisi data map orang-orang dengan data sebagai berikut :
+
+name: Hank
+Age: 50
+Job: Polisi
+
+name: Heisenberg
+Age: 52
+Job: Ilmuwan
+
+name: Skyler
+Age: 48
+Job: Akuntan
+
+Loop kedalam slice tersebut dan tampilkan tampilkan data-data tiap orang dengan format tulisan : 
+```Hi Perkenalkan, Nama saya [Nama], umur saya [umur], dan saya bekerja sebagai [pekerjaan]
+
+
+## CHALLENGE 9 : Looping 2
+
+Buatlah sebuah `variable` yang berisikan `slice` dari `float64`, dan hitunglah `rata-rata`, `jumlah`, dan `median` dari slice tersebut. 
+Gunakan for dan operasi aritmatika.
+
+go
+slice1 := []float64{1, 5, 7, 8, 10, 24, 33}
+slice2 := []float64{1.1, 5.4, 6.7, 9.2, 11.3, 25.2, 33.1}
+
+
+## CHALLENGE 10 : Logic 1 - Palindrome
+
+Diberikan sebuah `variabel` kata bertipe `String`. Buatlah program yang menampilkan `true` jika kata yang diberikan merupakan `palindrome` dan false jika bukan.
+Palindrome adalah sebuah kata yang jika dibalik atau dibaca dari belakang maka katanya tetap sama. 
+Contoh, "katak" jika dibaca dari belakang tetaplah "katak".
+
+## CHALLENGE 11 : Logic 2 - XOXO
+
+Diberikan sebuah variable kata bertipe String. Buatlah program dimana program tersebut akan menghitung jumlah karakter `x` dan jumlah karakter `o`. 
+Setelah perhitungan selesai maka tampilkan `true` jika jumlah karakter `o` dan `x` sama dan `false` jika tidak.
+
+## CHALLENGE 12 : Logic 3 - XOXO
+
+Diberikan sebuah variable kata bertipe String. Buatlah sebuah variabel berisi `slice` dari `int`
+Buatlah sebuah logic untuk mengurutkan slice tadi dari besar ke kecil, dengan memanfaatkan hanya pengkondisian dan pengulangan
+
+## CHALLENGE 13 : Function
+
+Buatlah sebuah variadic function yang dapat menerima argumen string yang tak terbatas jumlahnya.
+Function tersebut akan me-return sebuah kalimat string, yang merupakan gabungan dari tiap kata yang ada di argumen. 
+
+Contoh:
+AlayGen("hello", "world", "zzz") // akan menghasilkan "hello world zzz"
+
+selain mengabungkan katanya, kita perlu membuat tiap kata menjadi alay, dengan mengubah 
+
+a -> 4
+e -> 3
+i -> !
+l -> 1
+n -> N
+s -> 5
+x -> *
+
+## CHALLENGE 14 : Function 2
+Buatlah sebuah function yang menerima argument sebuah `n` int, dan akan me-return bilangan Fibonacci ke-`n`

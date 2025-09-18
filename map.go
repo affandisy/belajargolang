@@ -27,4 +27,31 @@ func main() {
 	for key, value := range data {
 		fmt.Println(key, ": ", value)
 	}
+
+	if val, ok := data["Kelas"]; ok {
+		fmt.Println("Ada: ", val)
+	} else {
+		fmt.Println("Tidak Ada")
+	}
+
+	dataSlice := make([]map[string]interface{}, 0)
+
+	dataMap1 := map[string]interface{}{
+		"Nama":     "Syihabuddin Affandi",
+		"Kelas":    8,
+		"IsActive": true,
+	}
+
+	dataSlice = append(dataSlice, dataMap1)
+
+	dataMap2 := map[string]interface{}{
+		"Nama":     "Firmansyah",
+		"Kelas":    10,
+		"IsActive": false,
+	}
+
+	dataSlice = append(dataSlice, dataMap2)
+
+	fmt.Println(dataSlice)
+
 }
