@@ -127,3 +127,30 @@ x -> *
 
 ## CHALLENGE 14 : Function 2
 Buatlah sebuah function yang menerima argument sebuah `n` int, dan akan me-return bilangan Fibonacci ke-`n`
+
+
+## CHALLENGE 14 : OJEK ONLINE
+
+Sebuah aplikasi ojek online sedang dibuat. Di dalam sistem, ada beberapa jenis driver yang bisa menerima pesanan:
+
+MotorDriver → mengantar penumpang dengan motor.
+CarDriver → mengantar penumpang dengan mobil.
+Setiap driver memiliki:
+
+Name (nama driver)
+Balance (saldo hasil pekerjaan)
+Ketika driver menyelesaikan order:
+
+MotorDriver mendapat Rp10.000 per order.
+CarDriver mendapat Rp25.000 per order.
+Tugasmu:
+
+Buat struct untuk MotorDriver dan CarDriver.
+Buat interface Driver dengan method Deliver() untuk menyelesaikan order.
+Buat method Deliver() sesuai jenis drivernya (menambahkan saldo).
+Buat struct OrderSystem yang bisa memproses order untuk driver mana pun (selama mereka memenuhi interface Driver).
+Simulasikan program dengan:
+
+2 driver motor
+1 driver mobil
+Proses beberapa order dan tampilkan hasil saldo akhirnya.
