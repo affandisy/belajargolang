@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Langkah-langkah pengerjaan simulasi Livecode
 // Membuat struct
@@ -44,6 +47,8 @@ func main() {
 		fmt.Print("What would you like to order? (Type 'done' to finish) \n")
 		fmt.Scanln(&penampungItem)
 
+		penampungItem = strings.ToLower(penampungItem)
+
 		if penampungItem == "done" {
 			break
 		}
@@ -52,7 +57,7 @@ func main() {
 		found := false
 
 		for _, menu := range menu {
-			if menu.Name == penampungItem {
+			if strings.ToLower(menu.Name) == penampungItem {
 				chosen = menu
 				found = true
 				break
@@ -61,7 +66,7 @@ func main() {
 
 		if !found {
 			fmt.Println("Item tidak ada di menu")
-			break
+			continue
 		}
 
 		fmt.Printf("How many %s would you like? \n", penampungItem)
