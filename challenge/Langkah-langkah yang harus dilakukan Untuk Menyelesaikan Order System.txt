@@ -1,0 +1,36 @@
+Langkah-langkah yang harus dilakukan untuk membuat order system:
+1. Mendefinisikan struct Menu, Order, Customer
+2. Isi struct Menu adalah name string, price float64
+3. Isi struct Order adalah Item Menu, quantity int
+4. Isi struct Customer adalah Name string, Order []Order
+5. Memasukkan data ke dalam struct Menu
+6. menu := []Menu{{"Pizza", 1.99},{"Menu B", Price B}....}
+7. Menampilkan (Print) Welcome dan Menu
+8. for _, m := range Menu { fmt.Printf("%s - $.2f", m.Name, m.Price)
+9. deklarasi slice order kosong untuk menampung Order
+10. var order []Order
+11. for kosong untuk menampung input user
+12. Mendeklarasikan variabel penampung seperti penampungItem, penampungNama (untuk yang ada customer), penampungQuantity
+13. Menampilkan Print dan mendapatkan Item dengan fmt.Scanln(&penampungItem)
+14. penampungItem = strings.toLower(penampungItem) dibuat untuk sesuain lowercase
+15. if penampungItem = "done" { break } jika user input done maka looping selesai
+16. selanjutnya menentukan apakah inputan user sesuai dengan yang ada di menu
+17. mendeklarasikan variabel chosen Menu dan found = false
+18. For _, m := range menu { if strings.toLower(m.Name) == penampungItem { chosen = m, found = true, break }
+19. lalu if !found { menu tidak ketemu continue}
+20. Selanjutnya menampung quantity sama dengan proses penampungItem
+21. if penampungQuantity <= 0 { "Harus lebih besar dari 0" }
+22. Selanjutnya melakukan append ke variabel order yang sudah dideklarasikan
+23. order = append(order, Order{Item: chosen, Quantity: penampungQuantity}
+24. Selanjutnya order summary
+25. Membuat variabel untuk menampung subTotal
+26. Perulangan di bagian order seperti berikut for _, o := range order { }
+27. Isi perulangan tersebut dengan aritmetika untuk menambahkan totalPrice
+28. totalPrice := float64(o.Quantity) * o.Item.Price
+29. Print nilainya ("%s: %.2f x %.2f = %.2f", o.Item.Name, o.Quantity, o.Item.Price, totalPrice)
+30. subTotal = subTotal + totalPrice
+31. Selanjutnya mendeklarasikan variabel tip, tax, dan totalPrice
+32. tip := subTotal * 0.20, tax := subTotal * 0.30, totalPrice = subTotal + tip + tax
+33. Menampilkan tip tax totalPrice
+
+
