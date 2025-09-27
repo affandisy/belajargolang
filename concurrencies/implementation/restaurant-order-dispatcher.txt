@@ -1,0 +1,29 @@
+Restaurant Order Dispatcher
+
+Anda diminta membuat program sederhana untuk mensimulasikan restoran yang menerima pesanan dengan prioritas tertentu.
+
+Ada 3 prioritas:
+
+1 = VIP Order (wajib dikerjakan duluan)
+
+2 = Regular Order
+
+3 = Late Night Snack
+
+Program harus memiliki:
+
+Struct Order dengan field Name (nama makanan) dan Priority (1–3).
+
+Struct Chef dengan field Id dan Name.
+
+Fungsi dispatcher yang mengirimkan Order ke channel sesuai prioritas (1 → 3).
+
+Fungsi chef.assignOrder sebagai goroutine, di mana chef mengambil Order dari channel dan “memasak” dengan time.Sleep(2 * time.Second).
+
+Gunakan WaitGroup untuk menunggu semua chef selesai.
+
+Output program harus menampilkan pesan seperti:
+Chef Gordon (1): Cooking Order: Steak
+Chef Jamie (2): Cooking Order: Salad
+Chef Gordon (1): Cooking Order: Sandwich
+All orders completed
