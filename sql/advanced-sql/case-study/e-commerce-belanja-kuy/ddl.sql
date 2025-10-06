@@ -1,13 +1,35 @@
-CREATE TABLE customers (customer_id SERIAL PRIMARY KEY, email varchar(100) UNIQUE, phone varchar(100));
+CREATE DATABASE belanjakuy;
+ERROR:  database "belanjakuy" already exists
+postgres=# DROP DATABASE belanjakuy;
+DROP DATABASE
+postgres=# CREATE DATABASE belanjakuy;
+CREATE DATABASE
+postgres=# \c belanjakuy;
+You are now connected to database "belanjakuy" as user "postgres".
+belanjakuy=# CREATE TABLE customers (customer_id SERIAL PRIMARY KEY, email varchar(100) UNIQUE, phone varchar(100));
+CREATE TABLE
+belanjakuy=# \dt
+           List of relations
+ Schema |   Name    | Type  |  Owner
+--------+-----------+-------+----------
+ public | customers | table | postgres
+(1 row)
 
-belanjakuy=# CREATE TABLE products (product_id SERIAL PRIMARY KEY, name varchar(100), price numeric(12, 2) NOT NULL CHECK (price > 0), stock INT NOT NULL CHECK (stock >= 0), created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW());
 
-belanjakuy=# CREATE TABLE product_logs (log_id SERIAL PRIMARY KEY, product_id INT NOT NULL REFERENCES products(product_id) ON DELETE CASCADE, action varchar(50), change_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(), old_price NUMERIC(12, 2), new_price NUMERIC(12,2), old_name varchar(200), new_name varchar(200), old_stock INT, n
-ew_stock INT);
+belanjakuy=# INSERT INTO customers (email, phone) VALUES ('sihab@mail.com', '089123456789'), ('sihabdummy@mail.com', '089987654321');
+INSERT 0 2
+belanjakuy=# INSERT INTO customers (email, phone) VALUES ('sihab2@mail.com', '089
+123456789'), ('sihabdummy1@mail.com', '089987654321');
+INSERT 0 2
+belanjakuy=# SELECT * FROM customers;
+ customer_id |        email         |    phone
+-------------+----------------------+--------------
+           1 | sihab@mail.com       | 089123456789
+           2 | sihabdummy@mail.com  | 089987654321
+           3 | sihab2@mail.com      | 089123456789
+           4 | sihabdummy1@mail.com | 089987654321
+(4 rows)
 
-belanjakuy=# CREATE FUNCTION log_product_update() RETURNS TRIGGER AS $$
-belanjakuy$# BEGIN
-belanjakuy$# INSERT INTO product_logs(product_id, action, change_time, old_price, new_price, old_name, new_name, old_stock, new_stock)
-belanjakuy$# VALUES
-belanjakuy$# (NEW.product_id, 'UPDATED', NOW(), OLD.price, NEW.price, OLD.name, NEW.name, OLD.stock, NEW.stock); RETURN NEW; END; $$ LANGUAGE plpgsql;
-CREATE FUNCTION
+
+belanjakuy=# INSERT INTO customers (email, phone) VALUES ('sihab3@mail.com', '089
+123456789'), ('sihabdummy2@mail.com', '089987654321');
